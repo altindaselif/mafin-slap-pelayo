@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon.webp"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>MAFIN | Slap Pelayo Olivares</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-logo-container">
+        <img class="header-logo" src="./assets/favicon.webp" alt="Mafin" />
+        <h1 class="header-title">#MAFIN</h1>
+      </div>
+
+      <div class="lang-container">
+        <button class="lang-button es-button active">ES</button>
+        <span class="divider">|</span>
+        <button class="lang-button en-button">EN</button>
+        <span class="divider">|</span>
+        <button class="lang-button pt-button">PT</button>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="video-container">
+        <video
+          class="slap-video"
+          src="./assets/slap-video.mp4"
+          playsinline
+        ></video>
+        <!-- <div class="sv-container">
+          <img
+            class="sv-photo-img sv-photo-img-1"
+            src="./assets/sv-photo-1.png"
+            alt="Serafina Valero Photo 1"
+          />
+          <img
+            class="sv-photo-img sv-photo-img-2"
+            src="./assets/sv-photo-2.png"
+            alt="Serafina Valero Photo 2"
+          />
+          <img
+            class="sv-photo-img sv-photo-img-3"
+            src="./assets/sv-photo-3.png"
+            alt="Serafina Valero Photo 3"
+          />
+        </div> -->
+      </section>
+
+      <section class="info-container">
+        <div class="ghost-tracker-container">
+          <div class="tracker-info-container">
+            <h3 class="tracker-title" data-i18n="tracker-title">
+              El fantasma de Fina
+            </h3>
+
+            <div class="progress-bar-bg">
+              <div class="ghost-progress-fill"></div>
+            </div>
+
+            <span class="tracker-text"
+              ><span class="ghost-click-count">100</span> / 100</span
+            >
+
+            <img
+              class="sv-name-img"
+              src="./assets/sv-name.png"
+              alt="Serafina Valero"
+            />
+          </div>
+
+          <img
+            class="tracker-ghost-img"
+            src="./assets/fina-ghost.svg"
+            alt="Fina Ghost Icon"
+          />
+        </div>
+
+        <div class="stats-flip-container">
+          <button class="flip-button">🏆</button>
+
+          <div class="flip-viewport">
+            <div class="stats-flipper">
+              <div class="card-face card-front">
+                <div class="stats-container">
+                  <div class="stat-container">
+                    <span class="stat-label" data-i18n="current-stat"
+                      >Tus tortazos ahora:</span
+                    >
+                    <span class="stat-value current-slaps">0</span>
+                  </div>
+
+                  <div class="stat-container">
+                    <span class="stat-label" data-i18n="local-total-stat"
+                      >Tus tortazos totales:</span
+                    >
+                    <span class="stat-value local-total-slaps">0</span>
+                  </div>
+
+                  <div class="stat-container global-stat">
+                    <span class="stat-label" data-i18n="global-total-stat"
+                      >Tortazos del mundo:</span
+                    >
+                    <span class="stat-value global-total-slaps">0</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-face card-back">
+                <div class="top-5-container">
+                  <h3 class="top-5-title" data-i18n="top-5-title">
+                    🌍 Top 5 Mundial
+                  </h3>
+                  <ul class="top-5-list">
+                    <li class="top-5-item" id="top-rank-1">
+                      <span></span><span class="rank-country"></span
+                      ><span class="rank-count"></span>
+                    </li>
+                    <li class="top-5-item" id="top-rank-2">
+                      <span></span><span class="rank-country"></span
+                      ><span class="rank-count"></span>
+                    </li>
+                    <li class="top-5-item" id="top-rank-3">
+                      <span></span><span class="rank-country"></span
+                      ><span class="rank-count"></span>
+                    </li>
+                    <li class="top-5-item" id="top-rank-4">
+                      <span></span><span class="rank-country"></span
+                      ><span class="rank-count"></span>
+                    </li>
+                    <li class="top-5-item" id="top-rank-5">
+                      <span></span><span class="rank-country"></span
+                      ><span class="rank-count"></span>
+                    </li>
+                  </ul>
+                  <div class="pagination-container">
+                    <button class="page-button prev-button">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                      </svg>
+                    </button>
+                    <span class="page-indicator"></span>
+                    <button class="page-button next-button">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="user-country-rank">
+                    <div class="user-country-box">
+                      <span class="user-country-name user-country-data"
+                        >Loading...</span
+                      >
+                      <span class="user-country-score">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-container">
+            <div class="speech-bubble" data-i18n="bubble-hello">¡Hola!</div>
+            <img
+              src="./assets/fina-ghost.svg"
+              class="ghost-img"
+              alt="Fina Ghost"
+            />
+            <button class="slap-button">
+              <img
+                class="slap-button-img"
+                src="./assets/slap-button.svg"
+                alt="Slap"
+              />
+              <span class="slap-button-text" data-i18n="slap-button"
+                >¡PÉGALE!</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="thanks-container" data-i18n="thanks-msg">
+      ¡Gracias por vuestro increíble apoyo! ❤️
+    </div>
+
+    <footer class="footer-container">
+      <p class="footer-text" data-i18n="disclaimer">
+        Nota: Respetamos muchísimo a Alejandro Albarracín. Es un actor increíble
+        y parece ser fan de Mafin, igual que nosotras. ¡Simplemente odiamos a
+        Pelayo Olivares! <br />
+        (P.D. Os queremos, Alba Brunet y Marta Belmonte. ¡Echamos muchísimo de
+        menos a Alba!)
+      </p>
+      <div class="kofi-container">
+        <a
+          href="https://ko-fi.com/annadewitt125"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="kofi-button"
+          data-i18n="kofi-msg"
+        >
+          ☕ Apoyar a la creadora
+        </a>
+      </div>
+    </footer>
+
+    <div class="video-modal" id="videoModal">
+      <button class="close-modal-button">✖</button>
+      <div class="video-quote-text"></div>
+      <video class="popup-video" controls playsinline></video>
+    </div>
+
+    <div class="evil-container">
+      <img
+        class="evil-img"
+        src="./assets/evil-pelayo.png"
+        alt="Evil Pelayo Tombstone"
+      />
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-check-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
