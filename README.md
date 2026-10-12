@@ -8,7 +8,7 @@
 ## 🔗 Links
 
 - **Live Site:** [View Live Demo](https://mafinslappelayo.netlify.app/)
-- **Code:** [View GitHub Repository](https://github.com/altindaselif/30-mafin-slap-pelayo)
+- **Code:** [View GitHub Repository](https://github.com/altindaselif/mafin-slap-pelayo)
 
 ---
 
@@ -21,7 +21,7 @@
 
 ## 🎭 What Is This?
 
-A fan-made page where _Sueños de Libertad_ viewers can slap the fictional villain Pelayo Olivares. Each click is counted, attributed to the user's country, and aggregated into a live global leaderboard. The page crossed **7.5 million slaps** through organic fandom sharing across Spain, Latin America, and Brazil — in three languages.
+A fan-made page where _Sueños de Libertad_ viewers can slap the fictional villain Pelayo Olivares. Each click is counted, attributed to the user's country, and aggregated into a live global leaderboard. The page crossed **7.5 million slaps** through organic fandom sharing among fans around the world — in three languages.
 
 ---
 
