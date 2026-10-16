@@ -29,7 +29,7 @@ A fan-made page where _Sueños de Libertad_ viewers can slap the fictional villa
 
 - **🌍 Live Country Leaderboard:** Every slap is attributed to the user's country and synced to Firebase in real-time. A paginated top-5 leaderboard (flippable with a 3D CSS card flip) shows which country is slapping the hardest, complete with flag emojis rendered via Unicode code points and country names localized using the `Intl.DisplayNames` API.
 - **🥇 Winner Celebration:** On first data load, the current #1 country is announced with a confetti burst (canvas-confetti) and a localized congratulations overlay.
-- **👻 Fina's Ghost Tracker:** A progress bar counts down from 100. At 50 slaps the ghost peeks in with an encouraging bubble; at 100 it animates across the screen via a CSS keyframe `flyToVideo` anchored with `getBoundingClientRect()` — so it lands precisely on the video regardless of viewport size.
+- **👻 Fina's Ghost Tracker:** A progress bar counts down from 100. At 50 slaps the ghost peeks in with an encouraging bubble; at 100 it animates across the screen via a CSS keyframe `flyToVideo` anchored with `getBoundingClientRect()` — so it lands on the same spot regardless of viewport size.
 - **💬 Mafin Quote Unlocks:** Starting at 150 slaps, a new Mafin quote (shuffled on load) appears in the ghost's speech bubble every 50 slaps. Each quote has a Play button that opens a video modal with the matching scene. At exactly 500 slaps, a special Marta VIP quote triggers — and launches a flying heart explosion across the screen.
 - **📍 Geolocation with Fallback Chain:** Country detection runs through four independent APIs (Cloudflare trace, ipapi.co, country.is, freeipapi.com) in sequence, stopping at the first successful response. While detection is in progress, slaps are queued in `pendingSlaps` and flushed to Firebase the moment the country resolves. The result is cached in `localStorage` so subsequent visits skip the chain entirely.
 - **🌐 Three-Language i18n (ES / EN / PT):** Full Spanish, English, and Portuguese support via `data-i18n` attributes and a `translations` object. Leaderboard country names re-render on language switch using the same `Intl.DisplayNames` locale as the selected language.
@@ -54,7 +54,7 @@ The stats panel flips between the personal hit counter and the global leaderboar
 
 ### Ghost Flight with `getBoundingClientRect()`
 
-At 100 slaps, the ghost element is detached from the flow, positioned absolutely using its current `getBoundingClientRect()` coordinates, and CSS custom properties `--target-x` / `--target-y` are set to the delta between its origin and the video element. The `flyToVideo` keyframe then animates `translate(var(--target-x), var(--target-y))`, guaranteeing a pixel-perfect landing on any screen size without hardcoded offsets.
+At 100 slaps, the ghost element is detached from the flow, positioned absolutely using its current `getBoundingClientRect()` coordinates, and CSS custom properties `--target-x` / `--target-y` are set to the distance left to travel to its landing point near the top-left corner. The `flyToVideo` keyframe then animates `translate(var(--target-x), var(--target-y))`, guaranteeing the same landing on any screen size without hardcoded offsets.
 
 ### Quote Shuffle & Milestone Unlocks
 
