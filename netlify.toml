@@ -1,0 +1,4 @@
+# Depoyu Netlify'a bağlayınca kullanılacak ayarlar.
+# Site düz HTML/CSS/JS, derlenecek bir şey yok: kök klasör yayınlanıyor.
+[build]
+  publish = "."
